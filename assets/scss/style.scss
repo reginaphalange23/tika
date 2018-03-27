@@ -1,0 +1,941 @@
+body{
+  margin: 0;
+}
+a{
+  text-decoration: none;
+}
+ul, ol{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+}
+h1, h2, h3, h4, h5 h6{
+  margin: 0;
+  font-family: "Palanquin SemiBold";
+}
+h1::after{
+  content: ' ';
+  display: block;
+  border: 1px solid #57ffff;
+  width: 50px;
+  margin: auto;
+  margin-bottom: 35px;
+}
+.wrapper{
+  width: 80%;
+  margin: auto;
+}
+header{
+  background-size: cover;
+  width: 100%;
+	height: 100vh;
+	background-position: center center;
+	position: relative;
+  z-index: 1;
+}
+nav{
+  background-color: #364f4f;
+  padding-top: 5px;
+  position: fixed;
+  width: 100%;
+  animation: move 0.8s linear ;
+  animation-direction: reverse;
+  -webkit-box-shadow:0px 2px 2px #303030;
+  -moz-box-shadow:0px 2px 2px #303030;
+  box-shadow:0px 2px 2px #303030;
+  a{
+    font-family: "Palanquin Thin";
+    font-size: 14px;
+    color: #ffffff;
+  }
+  ul{
+    li{
+      display: inline-block;
+      padding: 0 5px;
+    }
+  }
+}
+@keyframes move {
+  100% {
+    transform: translate(0, -65px);
+  }
+  80%{
+    transform: translate(0, 5px);
+  }
+  60%{
+    transform: translate(0, 0px);
+  }
+}
+.menu{
+  float: right;
+  padding-right: 1%;
+  li:after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .2s ease;
+  }
+  li:hover:after {
+    width: 100%;
+    background-color: #57ffff;
+  }
+  li:hover{
+    a{
+      color: #57ffff;
+    }
+  }
+}
+
+.welcome-text{
+  position: absolute;
+  width: 100%;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Palanquin Medium";
+  font-size: 20px;
+  :first-child{
+    animation: slide 1s linear ;
+    animation-direction: reverse;
+  }
+  :nth-child(2){
+    animation: slider 1s linear ;
+    animation-direction: reverse;
+  }
+  div{
+    color: #ffffff;
+    background-color: rgba(87, 255, 255, 0.4);
+  }
+}
+@keyframes slide {
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+@keyframes slider {
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+
+/* First Section */
+
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  margin-top: 150px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 70px;
+  transition: 0.6s ease;
+}
+.prev{
+  left: 8%;
+}
+.next {
+  right: 8%;
+}
+.prev:hover, .next:hover {
+  color: #303030;
+}
+.slide-dots{
+  text-align: center;
+  position: relative;
+}
+.dot {
+  cursor:pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ffffff;
+  border: 1px solid #303030;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #303030;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.slideshow-image{
+  float: left;
+}
+.slideshow-text{
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-family: "Palanquin";
+  font-weight: 100;
+  letter-spacing: 0.005em;
+  color: #303030;
+  margin-bottom: 10px;
+  position: relative;
+  span{
+    display: block;
+    line-height: 20px;
+  }
+}
+
+
+/* News section */
+
+.news{
+  background-color: #000000;
+  height: 300px;
+  color: #ffffff;
+  padding: 20px 0;
+  h1{
+    text-align: center;
+  }
+}
+
+/* Download */
+
+.download{
+  text-align: center;
+  background-color: #303030;
+  color: #bbbbbb;
+  h2{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    color: #ffffff;
+  }
+  a{
+    color: #57ffff;
+  }
+  a:hover{
+    color: #ffffff;
+    text-decoration: underline;
+  }
+  span{
+    display: block;
+  }
+}
+.gallery{
+  width: 80%;
+  height: 500px;
+  background-color: rgba(87, 255, 255, 0.2);
+  margin: 20px auto 40px auto;
+  border-radius: 5px;
+}
+.gallery-container{
+  width: 80%;
+  margin: auto;
+}
+.albums{
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  float: left;
+  div{
+    width: 100%;
+    height: 100px;
+    background-color: #303030;
+    color: #364f4f;
+  }
+  div:hover{
+    color: #303030;
+    background-color: #57FFFF;
+  }
+}
+.index-name{
+  color: #000000;
+  font-size: 10px;
+  text-align: left;
+}
+.centered{
+  vertical-align: middle;
+  text-align: center;
+  font-family: "Palanquin Regular";
+}
+.image-preview{
+  border: 1px solid orange;
+  width: 80%;
+  height: 400px;
+  margin-left: 20%;
+}
+.inline{
+  display: inline!important;
+}
+
+/* Purchase */
+
+.purchase{
+  background-color: #bbbbbb;
+  padding: 20px 0;
+  padding-bottom: 80px;
+  text-align: left;
+  font-family: "Palanquin";
+  h1{
+    text-align: center;
+  }
+  h3{
+    font-family: "Palanquin Medium";
+    font-weight: normal;
+    color: #364f4f;
+  }
+  li{
+    line-height: 18px;
+    font-size: 16px;
+    font-family: "Palanquin Thin";
+    width: 80%;
+    list-style-type: square;
+    margin-left: 40px;
+  }
+  ul{
+    margin-bottom: 20px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  form{
+    input, textarea{
+      display: block;
+      padding: 5px;
+      border: 1px solid #364f4f;
+      &:hover{
+        -moz-box-shadow: 0 0 4px #57ffff;
+        -webkit-box-shadow: 0 0 4px #57ffff;
+        box-shadow: 0 0 4px #57ffff;
+        border: 1px solid #57ffff;
+      }
+      &:focus{
+        -moz-box-shadow: 0 0 4px #57ffff;
+        -webkit-box-shadow: 0 0 4px #57ffff;
+        box-shadow: 0 0 4px #57ffff;
+        border: 1px solid #57ffff;
+      }
+    }
+    span{
+      display: block;
+      font-family: "Palanquin SemiBold";
+    }
+    ::placeholder{
+      font-family: "Palanquin Light";
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  .customer-info{
+    margin-left: 20px;
+  }
+  input{
+    width: 80%;
+  }
+  textarea{
+    height: 200px;
+    width: 100%;
+    font-family: "Palanquin Light";
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .message-content{
+    input{
+      margin: auto;
+      margin-top: 5px;
+      width: 100px;
+      background-color: #303030;
+      color: #bbbbbb;
+      font-family: "Palanquin Dark";
+      line-height: 14px;
+      &:hover{
+        background-color: #ffffff;
+        color: #303030;
+      }
+    }
+    label{
+      font-family: "Palanquin ExtraLight";
+    }
+  }
+}
+
+/* Customers */
+
+.customers{
+  background-image: url("../../images/1350.jpg");
+  background-repeat: repeat;
+  text-align: center;
+  color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100%;
+  .wrapper{
+    padding-bottom: 20px;
+  }
+  li{
+    font-family: "Palanquin ExtraLight";
+  }
+}
+.co-address{
+  color: #303030;
+}
+.reference{
+  width: 70%;
+  padding: 20px 40px;
+  margin: auto;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  .prev, .next{
+    margin-top: 30px;
+    font-size: 15px;
+  }
+}
+.reference-ssh{
+  margin-top: 30px;
+}
+
+/* Contact */
+
+.contact{
+  background-color: #acacac;
+  box-shadow: inset 0 7px 9px -7px #ffffff;
+  box-shadow: inset 0 -7px 9px -7px #303030;
+  color: #303030;
+  font-family: "Palanquin Thin";
+  padding: 10px 0;
+  .phone, .email, svg, ul{
+    display: inline-block;
+  }
+}
+#mail-icon:hover{
+  .mail-hover{
+    fill: #ffffff;
+  }
+}
+
+
+
+/* DESKTOP */
+
+@media screen and (min-width: 1200px){
+  .mobile{
+    display: none;
+  }
+  .flex{
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+  }
+  h1{
+    font-size: 36px;
+  }
+  .logo{
+    width: 250px;
+    padding-left: 10%;
+  }
+  nav{
+    height: 45px;
+    a{
+      line-height: 40px;
+    }
+  }
+  .welcome-text{
+    :first-child{
+      margin-top: 2%;
+      margin-bottom: 10%;
+    }
+    div{
+      padding: 15px 50px;
+    }
+  }
+
+/* Softwares */
+
+  .slideshow{
+    box-sizing: border-box;
+    background-color: #ffffff;
+    position: relative;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    h1::after{
+      display: none;
+    }
+  }
+  .slideshow-text{
+    text-align: left;
+  }
+
+  .slide{
+    display: none;
+    min-height: 400px;
+    img{
+      position: relative;
+    }
+  }
+  .geodet{
+    width: 25%;
+    padding-top: 20px;
+  }
+  .softwares{
+    padding-top: 40px;
+  }
+
+  .download{
+    padding: 20px 0;
+    h1, h4{
+      color: #ffffff;
+    }
+    span, li{
+      font-family: "Palanquin";
+    }
+    h4{
+      font-family: "Palanquin Thin";
+      font-size: 16px;
+      margin: 10px 0;
+    }
+    li{
+      margin: -4px;
+    }
+    ol{
+      text-align: left;
+      margin: auto;
+      width: 50%;
+    }
+    span{
+      line-height: 20px;
+    }
+  }
+  .abc{
+    list-style-type: lower-latin;
+  }
+  .num{
+    list-style-type: decimal;
+  }
+  .gallery{
+    height: 600px;
+  }
+
+  /* Customers */
+
+  .customers{
+    font-family: "Palanquin Light";
+    padding: 20px 0;
+    text-align: left;
+    .flex{
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+    h1{
+      text-align: center;
+    }
+    li{
+      line-height: 20px;
+    }
+    .quotes{
+      height: 40px;
+      display: block;
+      font-size: 20px;
+      line-height: 22px;
+    }
+  }
+
+/* Contact */
+
+    .contact{
+      li{
+        margin: 0;
+        line-height: 18px;
+        font-size: 18px;
+      }
+      svg{
+        width: 50px;
+        margin-right: 4px;
+      }
+    }
+    .email{
+      float: right;
+      margin-right: 20px;
+    }
+    .phone{
+      float: right;
+    }
+    .clearfix{
+      display: block;
+      clear: both;
+    }
+
+/* ANCHORS */
+
+  .anchor{
+    display: block;
+    height: 45px;
+    margin-top: -45px;
+    visibility: hidden;
+  }
+}
+
+/* Footer */
+
+footer{
+  background-color: #303030;
+  height: 30px;
+  font-family: "Palanquin Thin";
+  box-shadow: inset 0 -7px 9px -7px #000000;
+  span{
+    position: relative;
+    left: 80%;
+    color: #bbbbbb;
+    line-height: 30px;
+  }
+}
+
+/* TABLET */
+
+@media screen and (min-width: 769px) and (max-width: 1199px){
+  .wrapper{
+    width: 90%;
+  }
+  .desktop{
+    display: none!important;
+  }
+  .menu{
+    display: none;
+  }
+  nav{
+    height: 50px;
+  }
+  .burger{
+    float: right;
+    margin-right: 5%;
+  }
+  .logo{
+    width: 200px;
+    margin-left: 10%;
+  }
+  .welcome-text{
+    font-size: 18px;
+    :first-child{
+      margin-top: 5%;
+      margin-bottom: 15%;
+    }
+    div{
+      padding: 8px 20px;
+    }
+  }
+
+/* First Section */
+
+.slideshow{
+  box-sizing: border-box;
+  background-color: #ffffff;
+  position: relative;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  .wrapper{
+    width: 70%;
+  }
+  .flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.slide{
+  display: none;
+  min-height: 500px;
+  img{
+    position: relative;
+  }
+}
+.geodet{
+  width: 30%;
+  padding-top: 20px;
+}
+.softwares{
+  padding-top: 140px;
+  width: 180px;
+}
+.prev, .next{
+  cursor: pointer;
+  position: absolute;
+  margin-top: 200px;
+  color: #000000;
+  font-weight: bold;
+  font-size: 70px;
+  transition: 0.6s ease;
+}
+.acadgrac-text{
+  padding-top: 80px;
+}
+.prev{
+  left: 8%;
+}
+.next {
+  right: 8%;
+}
+.prev:hover, .next:hover {
+  color: #303030;
+}
+.slideshow-image{
+  float: left;
+}
+.slideshow-text{
+  width: 60%;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Palanquin";
+  font-weight: 100;
+  letter-spacing: 0.005em;
+  color: #303030;
+  margin-bottom: 10px;
+  position: relative;
+  span{
+    display: block;
+    line-height: 20px;
+  }
+}
+
+/* Download */
+
+  .download{
+    padding: 20px 0;
+    h1, h4{
+      color: #ffffff;
+    }
+    span, li{
+      font-family: "Palanquin";
+      font-size: 12px;
+    }
+    h4{
+      font-family: "Palanquin Thin";
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    li{
+      margin: -4px;
+    }
+    ol{
+      text-align: left;
+      margin: auto;
+      width: 50%;
+    }
+    span{
+      line-height: 14px;
+    }
+  }
+  .abc{
+    list-style-type: lower-latin;
+  }
+  .num{
+    list-style-type: decimal;
+  }
+  .gallery{
+    height: 600px;
+  }
+
+/* Reference */
+
+  .quotes{
+    height: 50px;
+    display: block;
+    font-size: 16px;
+    font-family: "Palanquin Thin";
+    line-height: 16px;
+  }
+
+/* Contact */
+
+  .contact{
+    li{
+      margin: 0;
+      line-height: 12px;
+      font-size: 12px;
+    }
+    svg{
+      width: 30px;
+      margin-right: 4px;
+    }
+  }
+  .email{
+    float: right;
+    margin-right: 20px;
+  }
+  .phone{
+    float: right;
+  }
+  .clearfix{
+    display: block;
+    clear: both;
+  }
+
+/* Footer */
+
+  footer{
+    background-color: #303030;
+    height: 26px;
+    font-family: "Palanquin Thin";
+    font-size: 12px;
+    span{
+      position: relative;
+      left: 80%;
+      color: #bbbbbb;
+      line-height: 26px;
+    }
+  }
+}
+
+/* MOBILE */
+
+@media screen and (max-width: 768px){
+  .desktop{
+    display: none!important;
+  }
+  h1{
+    line-height: 24px;
+  }
+  h1::after{
+    margin-top: 6px;
+  }
+  nav{
+    height: 36px;
+    padding-top: 3px;
+    text-align: center;
+    .logo{
+    width: 150px;
+    }
+  }
+  .burger{
+    position: absolute;
+    right: 2%;
+  }
+  .menu{
+    display: none;
+  }
+  .welcome-text{
+    :first-child{
+      margin-top: 2%;
+      margin-bottom: 25%;
+    }
+    div{
+      font-size: 12px;
+      line-height: 20px;
+      padding: 5px 15px;
+    }
+  }
+
+/* Download */
+
+  .download{
+    padding: 20px 0;
+    h1, h4{
+      color: #ffffff;
+    }
+    span, li{
+      font-family: "Palanquin";
+      font-size: 14px;
+    }
+    h1{
+      font-size: 20px;
+    }
+    h4{
+      font-family: "Palanquin Thin";
+      font-size: 14px;
+      line-height: 14px;
+      margin: 10px 0;
+    }
+    li{
+      margin: -2px;
+    }
+    ol{
+      text-align: left;
+      margin: auto;
+      width: 100%;
+    }
+    span{
+      line-height: 14px;
+    }
+  }
+  .abc{
+    list-style-type: lower-latin;
+    margin-left: 10px;
+  }
+  .num{
+    list-style-type: decimal;
+  }
+  .gallery{
+    height: 600px;
+  }
+
+/* Customers & reference */
+
+  .customers{
+    padding-top: 20px;
+    li{
+      line-height: 16px;
+    }
+  }
+  .quotes{
+    min-height: 86px;
+    display: block;
+    font-size: 14px;
+    font-family: "Palanquin Thin";
+    line-height: 14px;
+  }
+
+/* Contact */
+
+  .contact{
+    text-align: left;
+    .wrapper{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    li{
+      margin: 0;
+      line-height: 12px;
+      font-size: 12px;
+    }
+    svg{
+      width: 20px;
+      margin-right: 4px;
+    }
+  }
+  #phone-icon:hover{
+    .phone-hover{
+      fill: #57ffff;
+    }
+  }
+
+  /* Footer */
+
+    footer{
+      background-color: #303030;
+      height: 22px;
+      font-family: "Palanquin Thin";
+      font-size: 12px;
+      span{
+        position: relative;
+        left: 60%;
+        color: #bbbbbb;
+        line-height: 22px;
+      }
+    }
+}

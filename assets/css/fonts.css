@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'PalanquinMedium';
+  src: url("PalanquinDark-Medium.eot");
+  src: url("PalanquinDark-Medium.eot?#iefix") format("embedded-opentype"), url("PalanquinDark-Medium.woff") format("woff"), url("PalanquinDark-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinSB';
+  src: url("Palanquin-SemiBold.eot");
+  src: url("Palanquin-SemiBold.eot?#iefix") format("embedded-opentype"), url("Palanquin-SemiBold.woff") format("woff"), url("Palanquin-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinThin';
+  src: url("Palanquin-Thin.eot");
+  src: url("Palanquin-Thin.eot?#iefix") format("embedded-opentype"), url("Palanquin-Thin.woff") format("woff"), url("Palanquin-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinDarkB';
+  src: url("PalanquinDark-Bold.eot");
+  src: url("PalanquinDark-Bold.eot?#iefix") format("embedded-opentype"), url("PalanquinDark-Bold.woff") format("woff"), url("PalanquinDark-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinDark';
+  src: url("PalanquinDark-Regular.eot");
+  src: url("PalanquinDark-Regular.eot?#iefix") format("embedded-opentype"), url("PalanquinDark-Regular.woff") format("woff"), url("PalanquinDark-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinExtraLight';
+  src: url("Palanquin-ExtraLight.eot");
+  src: url("Palanquin-ExtraLight.eot?#iefix") format("embedded-opentype"), url("Palanquin-ExtraLight.woff") format("woff"), url("Palanquin-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinRegular';
+  src: url("Palanquin-Regular.eot");
+  src: url("Palanquin-Regular.eot?#iefix") format("embedded-opentype"), url("Palanquin-Regular.woff") format("woff"), url("Palanquin-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinMedium';
+  src: url("Palanquin-Medium.eot");
+  src: url("Palanquin-Medium.eot?#iefix") format("embedded-opentype"), url("Palanquin-Medium.woff") format("woff"), url("Palanquin-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinBold';
+  src: url("Palanquin-Bold.eot");
+  src: url("Palanquin-Bold.eot?#iefix") format("embedded-opentype"), url("Palanquin-Bold.woff") format("woff"), url("Palanquin-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinDarkSB';
+  src: url("PalanquinDark-SemiBold.eot");
+  src: url("PalanquinDark-SemiBold.eot?#iefix") format("embedded-opentype"), url("PalanquinDark-SemiBold.woff") format("woff"), url("PalanquinDark-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'PalanquinLight';
+  src: url("Palanquin-Light.eot");
+  src: url("Palanquin-Light.eot?#iefix") format("embedded-opentype"), url("Palanquin-Light.woff") format("woff"), url("Palanquin-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
